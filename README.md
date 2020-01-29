@@ -3,27 +3,39 @@
 ![](screenshot.png)
 
 ## Background
-For ten years I used the popular Wordpress platform for my personal [blog,](https://rayheffer.com) that was hosted on a hardened CentOS Linux virtual private server (VPS). While this served me well over the years, Wordpress has [294 known vulnerabilities](https://www.cvedetails.com/vulnerability-list/vendor_id-2337/product_id-4096/Wordpress-Wordpress.html) at the time of writng this, not including the myriad of vulnerable plugins often required to customize Wordpress. Vulnerabilities with Wordpress plugins are considered to be the most likely attack vector of Wordpress sites being compromised. Furthermore, when self-hosting a Wordpress blog on a virtual server, the administrative overhead of keeping it patched (OS, kernel, modules, etc.) and secure can be quite burdensome. In 2017 I [published](https://www.rayheffer.com/building-secure-wordpress-server-lamp-centos-7-selinux/) a lengthy blog post of building a secure server for Wordpress based on the LAMP stack.
+This Jekyll theme was created to replace a theme I had previously created for Wordpress. Using the Bootstrap 4 framework, it is responsive and ready for mobile devices. It will work flawlessly on Google Chrome, Firefox, Opera, Safari, and Internet Explorer 11 (if you have to use that).
+
+One of the goals I had in mind for this theme was to emulate a Wordpress blog. This theme uses the Jekyll Paginate plugin so you can choose how many blog posts to display on each page, and a simple next / previous button is displayed at the bottom of each page. The blog excerpt, seperated with a <!--more--> tag, will display the Read More button. Each post will contain the date, blog author, title, and tags. Both tags and categories can be used.
+
+One of the challenges with static HTML websites is the lack of dynamic content, such as a comments form. However, static sites can work around this in many ways, giving the perception that the site is, indeed, dynamic such as Wordpress. While there are third-party commenting systems and add-ons available, many of them do not respect the privacy of website visitors as they gather, track, and profile user identities. One alternative is to use a serverless / functions infrastructure, however this would require additional setup and is not as simple to implement.
+
+The solution this theme has adopted is the ability to embed a Twitter tweet for comments. Simply add the Tweet ID, which is part of the Twitter URL for a tweet, and it will display at the bottom of the blog post with a Reply on Twitter button. If not Tweet ID is added to a blog post, it simply states that comments are disabled.
+
+The Existence theme also adopts an easily customizable navigation menu at the top of the page, with options for a dropdown menu. Social media icons can be added easily, for all popular social media platforms, displaying the icons in the sidebar.
+
+There is also an RSS feed, another important feature for any blogger.
+
+I hope you enjoy the Existence theme. It has been the result of many late nights and drinking way too much coffee.
+
+### Privacy Engineering
+For those that know me or follow me on [@rayheffer](https://twitter.com/rayheffer), you'll know that I am obsessed with privacy. I believe any application development should adopt a good privacy-minded framework, from from the start. Security is one aspect of that, it doesn't complete the puzzle. Applications, whether web-based, mobile, or otherwise, are often developed to gather telemetry, statistics, usage, and personally identifiable information such as names and email from sign-up forms, IP addresses, browser information, and tracking cookies. As for the latter, many websites use Google analytics which also adopts tracking cookies through embedded JavaScript and cookies.
+
+As I write this, Wordpress has [294 known vulnerabilities](https://www.cvedetails.com/vulnerability-list/vendor_id-2337/product_id-4096/Wordpress-Wordpress.html), and that doesn't include the myriad of vulnerable plugins often required to customize Wordpress. Vulnerabilities with Wordpress plugins are considered to be the most likely attack vector of Wordpress sites being compromised. In fact this seems to be constantly mentioned in the [news](https://thehackernews.com/search/label/Wordpress%20hacking), and I am sure this will continue.
+
+Furthermore, when self-hosting a Wordpress blog on a virtual server, the administrative overhead of keeping it patched (OS, kernel, modules, etc.) and secure can be quite burdensome. In 2017 I [published](https://www.rayheffer.com/building-secure-wordpress-server-lamp-centos-7-selinux/) a lengthy blog post of building a secure server for Wordpress based on the LAMP stack. While that was great fun and still has it's place, especially for organizations that need to maintain Wordpress, I strongly believe static HTML sites are the best option for hobbyists, bloggers, and technical entheusiastcs.
 
 In the end I decided to start over, and created this theme for Jekyll. 
 
-### Static Sites
-To kick off 2019 I decided to adopt a completely new approach to building and maintaining my [blog](https://www.rayheffer.com), using static sites. My requirements were:
-* Serverless - Use static HTML and / or serverless functions
-* Use Git - Two branches (master and develop)
-* Open-source site code (HTML, CSS, JavaSCript) - GitHub
-* CDN - Use a Content Deliver Network to ensure the site is as fast as possible no matter where visitors are located
-* Custom theme - I wanted to build my own theme
-
 ## Features
-* MIT License
-* Built to support the latest, stable releases of all major browsers and platforms
-* Fully responsive HTML template created with Bootstrap 4
-* Responsive design with collapsing navigation, incuding dropdown menus and active page style
-* About page
+* Privacy-first
+* Top-menu, front page sidebar (default) layout, and full-page (minimal) layout.
+* Blog post focused, with posted date, author name, front page excerpts with read more button
+* Commenting: Twitter integration with toggle on/off by simply entering a Tweet ID for each post. If no Tweet ID is entered, it displays "Comments are closed for this post."
+* Tags feature. Add one or more tags to blog posts, and easily add a page listing all posts for that tag.
+* Build using Bootstrap 4: Built to support the latest, stable releases of all major browsers and platforms
+* Responsive design, works on mobile devices, with collapsing navigation, including dropdown menus and active page highlighting
+* Pages: Easily add pages (E.g. About Me) or pages containing blog posts.
 * Footer - Copyright and Privacy Policy
-* SCSS files included for deeper customization options
-* Embed Twitter (tweet) using TweetID for individual posts
 
 ## Usage
 
@@ -35,7 +47,9 @@ subheading: [Italic sub-heading]
 description: [Description of the site, for metatag]
 ```
 
+
 `_data\default.yml'
+
 ```
 brand:
   name: [Your Name, displayed on left of menu]
@@ -70,6 +84,7 @@ social-buttons: [Used Font-Awesome to generate icons]
 quicklinks: [Displayed in footer]
   - title: Privacy Policy
     url: '/privacy/'
+```
 
 ## License
 

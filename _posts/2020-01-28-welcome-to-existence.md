@@ -3,7 +3,7 @@ title: Welcome to the Σxistence Theme
 layout: post
 author: Ray Heffer
 categories: []
-tags: []
+tags: [theme]
 excerpt_separator: <!--more-->
 permalink: /welcome-to-existence/
 tweetid: 

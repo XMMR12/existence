@@ -1,0 +1,22 @@
+---
+layout: page
+title: Themes
+tag: theme
+permalink: /theme/
+---
+           
+            <table>
+                <thead>
+                  <tr>
+                    <th>Post</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+            {% for post in site.tags[page.tag] %}
+              <tr>
+                <td><a class="btn btn-dark btn-sm" href="{{ post.url }}">{{ post.title }}</a></td>
+                <td>{{ post.date | date_to_string }}</td>
+              </tr>             
+            {% endfor %}
+          </tbody>
+        </table>

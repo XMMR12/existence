@@ -12,8 +12,8 @@ nav:
         url: '/science/'
       - title: Travel
         url: '/travel/'
-  - title: Music
-    url: '/music/'
+  - title: Theme
+    url: '/theme/'
   - title: Linux
     url: '/linux/'
   - title: Portfolio
