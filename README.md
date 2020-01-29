@@ -1,7 +1,7 @@
 ## Preview
 ![](screenshot.png)
 
-[Try out this theme on Netlify](https://nifty-keller-40e564.netlify.com/)
+[Try out this theme on Netlify](https://elegant-bose-edf0e2.netlify.com/)
 
 ## Background
 This Jekyll theme was created to replace a theme I had previously created for Wordpress. Using the Bootstrap 4 framework, it is responsive and ready for mobile devices. It will work flawlessly on Google Chrome, Firefox, Opera, Safari, and Internet Explorer 11 (if you have to use that).
