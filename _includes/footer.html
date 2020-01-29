@@ -1,0 +1,24 @@
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <span class="copyright">{{ site.data.default.copyright }}</span>
+            </div>
+            <div class="col-md-4">
+              <span class="copyright">Based on the Existence Jekyll Theme</span>
+            </div>
+            <div class="col-md-4">
+              <ul class="list-inline quicklinks">
+                {%- for ql in site.data.default.quicklinks -%}
+                {% assign ws = '' %}
+                <li class="list-inline-item">
+                  <a href="{{ ql.url }}">{{ ql.title }}</a>
+                </li>
+                {%- endfor -%}
+              {% assign ws = '' %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>

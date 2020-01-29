@@ -18,6 +18,26 @@ layout: minimal
     <!-- Close container -->
             </div>
         </div>
+        
+    <!-- Embeded Tweet JavaScript -->
+    <script>
+        window.onload = (function(){
+            var tweet = document.getElementById("tweet");
+            var id = tweet.getAttribute("tweetID");
+            
+            twttr.widgets.createTweet(
+              id, tweet, 
+              {
+                conversation : 'all',       // or all
+                cards        : 'visible',   // or visible 
+                theme        : 'dark',      // or dark
+                dnt          : 'on'         // Do Not Track
+              })
+            .then (function (el) {
+              el.contentDocument.querySelector(".footer").style.display = "none";
+            });
+            });
+        </script>
 
     <!-- Open container -->
     <div class="container"> 
