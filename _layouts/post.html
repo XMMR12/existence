@@ -1,0 +1,35 @@
+---
+layout: minimal
+---
+
+{% assign tweeturl = "https://twitter.com/rayheffer/status/" | append: page.tweetid %}
+
+    <!-- Open container -->
+        <div class="container"> 
+            <div class="postbox">
+                <h1>{{ page.title }}</h1>               
+                <p>{{ page.date | date_to_string }} by {{ page.author }}</p>
+                {{ content }}
+                <div class="boxlinks">
+                    <p>Tagged with: {% for tag in page.tags %}
+                    <a class="btn btn-rh btn-sm" href="/tags/{{ tag }}/">{{ tag }}</a>
+                    {% endfor %}</p>
+                </div>
+    <!-- Close container -->
+            </div>
+        </div>
+
+    <!-- Open container -->
+    <div class="container"> 
+            <div class="postbox">
+                {% if page.tweetid %}
+                <p class="lead text-uppercase">Keep the conversation going on Twitter!</p>
+                <div id="tweet" tweetID="{{ page.tweetid }}"></div>
+                <script sync src="https://platform.twitter.com/widgets.js"></script>
+                <a class="btn btn-rh" href="{{ tweeturl }}">Reply with Twitter</a>
+                {% else %}
+                <p class="lead text-uppercase">Comments are closed for this post.</p>
+                {% endif %}
+    <!-- Close container -->
+            </div>
+    </div>

@@ -1,0 +1,21 @@
+---
+---
+/*!
+ * Σxistence theme CSS
+ * Copyright (c) 2020 Ray Heffer
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+// Variables and mixins
+@import "_variables.scss";
+@import "_mixins.scss";
+
+// Core CSS
+@import "_global.scss";
+@import "_navbar.scss";
+@import "_masthead.scss";
+@import "_blog.scss";
+@import "_footer.scss";
+@import "_animate.scss"

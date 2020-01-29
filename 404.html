@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-page" id="mainNav">
+        <div class="container animated fadeInDown">
+          <a class="navbar-brand js-scroll-trigger" href="/">{{ site.data.default.brand.name }}</a>
+          <!-- Add Menu button for mobile devices -->
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            {{ site.data.default.menu-text }}
+            <i class="fa fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto">
+              <!-- Start FOR each nav entry in default -->
+              {%- for link in site.data.default.nav -%}
+                {% assign ws = '' %}            
+                <!-- Add Dropdown Menu if sublinks exist-->
+                {% if link.sublinks %}
+                  <li class="dropdown nav-item">
+                      <a href="{{ link.url }}" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" aria-label="Dropdown menu">{{ link.title }}</a>
+                      <ul class="dropdown-menu text-uppercase ml-auto">
+                          {% for sublink in link.sublinks %}
+                            <li>
+                                <a class="nav-link" href="{{ sublink.url }}">{{ sublink.title }}</a>
+                            </li>
+                          {% endfor %}
+                      </ul>
+                  </li>
+                {% else %}
+                  <!-- ESLE no sublinks then display normal nav-item -->
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="{{ link.url }}">{{ link.title }}</a>
+                  </li>
+                {% endif %}
+                <!-- End FOR loop, no more nav entries! -->
+              {%- endfor -%}
+            {% assign ws = '' %}
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!-- End Navigation -->
+
+    <!-- Show content -->
+    <div class="content animated fadeInDown fast">
+        <div class="container"> 
+            <div class="postbox">
+                <h1>The requested page not found.</h1>
+            </div>
+        </div>
+    </div>
+    

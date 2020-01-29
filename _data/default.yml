@@ -1,0 +1,44 @@
+brand:
+  name: Σxistence # Heading Title
+
+nav:
+  - title: About
+    url: '/about/'
+  - title: Open Me
+    sublinks:
+      - title: Life
+        url: '/life/'
+      - title: Science
+        url: '/science/'
+      - title: Travel
+        url: '/travel/'
+  - title: Music
+    url: '/music/'
+  - title: Linux
+    url: '/linux/'
+  - title: Portfolio
+    url: '/portfolio/'
+
+menu-text: Menu
+
+copyright: Copyright &copy; 2020
+
+social-buttons:
+  - icon: fab fa-twitter
+    url: '' 
+  - icon: fab fa-github
+    url: ''
+  - icon: fab fa-linkedin
+    url: ''
+  - icon: fab fa-instagram
+    url: ''
+  - icon: fab fa-reddit
+    url: ''
+  - icon: fab fa-facebook
+    url: ''
+  - icon: fas fa-rss
+    url: '/feed.xml'
+    
+quicklinks:
+  - title: Privacy Policy
+    url: '/privacy/'

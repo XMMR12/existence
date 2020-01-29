@@ -1,0 +1,22 @@
+// Mixins
+// Background Cover Mixin
+@mixin background-cover {
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  -o-background-size: auto;
+  background-size: auto;
+}
+
+// Font Mixins
+@mixin body-font {
+  font-family: 'Montserrat',sans-serif;
+}
+@mixin title-font {
+  font-family: 'Quantico', sans-serif;
+}
+@mixin heading-font {
+  font-family: 'Montserrat', sans-serif;
+}
+@mixin sub-font {
+  font-family: 'Montserrat', sans-serif;
+}

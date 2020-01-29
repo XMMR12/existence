@@ -1,0 +1,96 @@
+// Styling for the navbar
+#mainNav {
+  background-color: $gray-900;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2) !important;
+  .navbar-toggler {
+    font-size: 12px;
+    right: 0;
+    padding: 13px;
+    text-transform: uppercase;
+    color: white;
+    border: 0;
+    background-color: $primary;
+    @include heading-font;
+  }
+  .navbar-brand {
+    color: $primary;
+    text-transform: uppercase;
+    @include heading-font;
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      color: $secondary;
+    }
+  }
+    .navbar-nav {
+    .nav-item {
+      .nav-link {
+        font-size: 90%;
+        font-weight: 400;
+        padding: 0.75em 0;
+        letter-spacing: 1px;
+        color: white;
+        @include heading-font;
+        &.active,
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+    .dropdown-menu {
+      background: $backgroundgrey;
+      opacity: 0.9;
+      border-color: $gray-800;
+    }
+  }
+}
+@media(min-width:992px) {
+  #mainNav {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    border: none;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2) !important;
+      .navbar-brand {
+      font-size: 3em;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+      border-left: 15px solid $gray-200;
+      line-height: 0.6;
+      padding-left: 15px;
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          padding: 1.1em 1em !important;
+        }
+      }
+    }
+    &.navbar-page {
+      padding-top: 0;
+      padding-bottom: 0;
+      background-color: $gray-900;
+      .navbar-brand {
+        font-size: 1.5em;
+        line-height: 0.6;
+        padding-left: 15px;
+        border-left: 6px solid $gray-200;
+      }
+    }
+    &.navbar-shrink {
+      padding-top: 0;
+      padding-bottom: 0;
+      background-color: $gray-900;
+      .navbar-brand {
+        font-size: 1.5em;
+        line-height: 0.6;
+        padding-left: 15px;
+        border-left: 6px solid $gray-200;
+      }
+    }
+  }
+}
