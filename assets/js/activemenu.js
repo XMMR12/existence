@@ -1,4 +1,5 @@
 /**
+ * JavaScript for the Σxistence menu
  * Copyright (c) 2020 Ray Heffer
  *
  * This source code is licensed under the MIT license found in the
@@ -6,5 +7,5 @@
  *
  */
 
-// Adds the 'active' navigation class based on the URL. This makes the top menu look pretty!
+  // Adds the 'active' navigation class based on the URL, to highlight the current page based on the URL
   $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');      

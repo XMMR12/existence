@@ -8,21 +8,24 @@
   <body id="page-top">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <!-- Main Container -->
         {% include container.html %}
     <!-- End Navigation -->
     
     <!-- Show content -->
-        {{ content }}
+    {% if page.url != "/" %}
+    <div class="content animated fadeInDown fast">{{ content }}</div>
+    {% elsif page.url == "/" %}
+    {{ content }}
+    {% endif %}
     <!-- End content -->
     
     {% include footer.html %}
 
-    <!-- Plugin JavaScript -->
-    <script src="{{ assets_path }}vendor/jquery-easing/jquery.easing.min.js"></script>
-    
-    <!-- Custom scripts for this template -->
-    <script src="{{ assets_path }}js/existence.js"></script>
+    {% include scripts.html %}
+
+    {% if page.url != "/" %}
+    <script src="{{ assets_path }}js/activemenu.js"></script>
+    {% endif %}
 
   </body>
 
