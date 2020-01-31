@@ -9,7 +9,7 @@ permalink: /welcome-to-existence/
 tweetid: 
 ---
 
-This Jekyll theme was created to replace a theme I had previously created for Wordpress. Using the Bootstrap 4 framework, it is responsive and ready for mobile devices. It will work flawlessly on Google Chrome, Firefox, Opera, Safari, and Internet Explorer 11 (if you have to use that).
+This Jekyll theme was created to replace a Wordpress theme I had previously created for bloggers. Using the Bootstrap 4 framework, it is responsive and ready for mobile devices. It will work flawlessly on Google Chrome, Firefox, Opera, Safari, and Internet Explorer 11 (if you have to use that).
 
 One of the goals I had in mind for this theme was to emulate a Wordpress blog. Using the Jekyll Paginate plugin, you can choose how many blog posts to display on each page, with a simple next / previous button. Each blog excerpt will display a Read More button, and each post will contain the date, blog author, title, and tags. Both tags and categories can be used.
 

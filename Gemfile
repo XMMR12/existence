@@ -13,7 +13,9 @@ source "https://rubygems.org"
 # '~> 2.1'     is identical to '>= 2.1'    and '< 3.0'
 # '~> 2.2.beta' will match prerelease versions like '2.2.beta.12'
 
-gem "jekyll", "~> 4.0.0"
+# gem "jekyll", "~> 4.0.0"
+# Using the pull request that supresses the Ruby depreciated warnings. When Jekyll is updated, can use above line 
+gem "jekyll", github: "jekyll/jekyll", ref: "refs/pull/7948/head"
 
 # Plugins
 group :jekyll_plugins do
@@ -30,4 +32,3 @@ end
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
-
