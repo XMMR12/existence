@@ -4,6 +4,8 @@ brand:
 nav:
   - title: About
     url: '/about/'
+  - title: Video
+    url: '/video/'
   - title: Open Me
     sublinks:
       - title: Life
