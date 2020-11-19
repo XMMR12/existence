@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="author" content="{{ site.author }}">
+   
+    <!-- Twitter Do Not Track -->
+    <meta name="twitter:dnt" content="on">
+
+    <title>{{ page.title }}</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="{{ assets_path }}vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Font Awesome, used for Social Media icons -->
+    <link href="{{ assets_path }}vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ assets_path }}vendor/fontawesome/css/brands.css" rel="stylesheet" type="text/css">
+    <link href="{{ assets_path }}vendor/fontawesome/css/solid.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Google Fonts -->
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
+    
+    <!-- Custom styles for this template -->
+    <link href="{{ assets_path }}css/main.min.css" rel="stylesheet">
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ assets_path }}vendor/jquery/jquery.min.js"></script>
+    <script src="{{ assets_path }}vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </head>
